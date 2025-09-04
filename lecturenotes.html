@@ -32,34 +32,57 @@
     }
     main {
       padding: 2em;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       background: white;
     }
     h2 {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 20px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) 200px; /* 3 lectures + 1 review column */
+      gap: 15px 30px; /* spacing between cells */
+      align-items: start;
+    }
+    .grid a {
+      display: block;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .grid a:hover {
+      background: #e0e0ff;
+    }
+    .empty {
+      visibility: hidden; /* placeholder for holidays */
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Marianna Russkikh</h1>
-    <nav>
-     
-    </nav>
   </header>
 
   <main>
-    <a href="Lecture_1 3D coordinates.pdf" target="_blank">Lecture 1.pdf</a>
-    <a href="Lecture_2 Vectors.pdf" target="_blank">Lecture 2.pdf</a>
-    <a href="Lecture_3 Dot Product.pdf" target="_blank">Lecture 3.pdf</a>
-    <a href="Lecture_4 Cross Product.pdf" target="_blank">Lecture 4.pdf</a>
-    <a href="Review_1 dot and cross product.pdf" target="_blank">Review 1.pdf</a>
-    <a href="Lecture_5 Lines.pdf" target="_blank">Lecture 5.pdf</a>
-    <a href="Lecture_6 Planes.pdf" target="_blank">Lecture 6.pdf</a>
+    <div class="grid">
+      <a href="Lecture_1 3D coordinates.pdf" target="_blank">Lecture 1</a>
+      <a href="Lecture_2 Vectors.pdf" target="_blank">Lecture 2</a>
+      <a href="Lecture_3 Dot Product.pdf" target="_blank">Lecture 3</a>
+      <a href="Review_1 dot and cross product.pdf" target="_blank">Review 1</a>
+
+      <a href="Lecture_4 Cross Product.pdf" target="_blank">Lecture 4</a>
+      <a href="Lecture_5 Lines.pdf" target="_blank">Lecture 5</a>
+      <a href="Lecture_6 Planes.pdf" target="_blank">Lecture 6</a>
+      <div class="empty"></div> <!-- no review here -->
+
+     
+    </div>
   </main>
 
   <footer>
